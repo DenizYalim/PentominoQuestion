@@ -1,5 +1,5 @@
-// PentaminoGraph.cpp
-#include "PentaminoGraph.h"
+// PentominoGraph.cpp
+#include "PentominoGraph.h"
 #include <iostream>
 
 // Namespace declarations
@@ -10,7 +10,7 @@ using std::vector;
 using std::pair;
 
 // Initialize the static member 'pieceSchematics'
-const unordered_map<char, pair<vector<int>, vector<int>>> PentaminoGraph::pieceSchematics = {
+const unordered_map<char, pair<vector<int>, vector<int>>> PentominoGraph::pieceSchematics = {
         {'P', {{0, 1, 0, 1, 0}, {0, 0, 1, 1, 2}}},
         {'I', {{0, 1, 2, 3, 4}, {0, 0, 0, 0, 0}}},
         {'V', {{0, 0, 0, 1, 2}, {0, 1, 2, 0, 0}}},
@@ -27,7 +27,7 @@ const unordered_map<char, pair<vector<int>, vector<int>>> PentaminoGraph::pieceS
 };
 
 // Constructor implementation
-PentaminoGraph::PentaminoGraph(int width, int height, int blockCount)
+PentominoGraph::PentominoGraph(int width, int height, int blockCount)
         : graph(width, height), blockCount(blockCount) {
 
     // Initialize 'pieces' with all pieces set to 'Unused'
@@ -40,7 +40,7 @@ PentaminoGraph::PentaminoGraph(int width, int height, int blockCount)
 }
 
 // Place a specific piece on the graph
-bool PentaminoGraph::placePiece(int row, int column, char pieceName) {
+bool PentominoGraph::placePiece(int row, int column, char pieceName) {
     // Check if the piece is available
     if (pieces[pieceName] == Used) {
         cout << "Piece " << pieceName << " has already been used." << endl;
@@ -70,7 +70,7 @@ bool PentaminoGraph::placePiece(int row, int column, char pieceName) {
 }
 
 // Place any piece given its position vectors
-bool PentaminoGraph::placeAnyPiece(int row, int column,
+bool PentominoGraph::placeAnyPiece(int row, int column,
                                    const vector<int>& piecePosX,
                                    const vector<int>& piecePosY) {
 

@@ -1,4 +1,4 @@
-// PentaminoGraph.h
+// PentominoGraph.h
 #ifndef PENTAMINOGRAPH_H
 #define PENTAMINOGRAPH_H
 
@@ -10,7 +10,7 @@
 using std::unordered_map;
 using std::vector;
 
-class PentaminoGraph {
+class PentominoGraph {
 private:
     enum pieceAvailability {
         Used,
@@ -28,7 +28,7 @@ public:
     Graph graph;
 
     // Constructor
-    PentaminoGraph(int width, int height, int blockCount = 5);
+    PentominoGraph(int width, int height, int blockCount = 5);
 
     // Member functions
     bool placePiece(int row, int column, char pieceName);

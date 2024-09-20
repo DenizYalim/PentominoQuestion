@@ -6,7 +6,7 @@
 
 #include "Graph.h"
 #include "Utility.h"
-#include "PentaminoGraph.h"
+#include "PentominoGraph.h"
 
 using namespace std;
 
@@ -338,7 +338,7 @@ int main() {
 
     Graph graph1(5, 5);
 
-    PentaminoGraph pentaminoGraph(7,7);
+    PentominoGraph pentaminoGraph(7, 7);
 
     int userInputRow = 0, userInputColumn = 0;
     char pieceName;
