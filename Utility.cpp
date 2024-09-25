@@ -119,3 +119,38 @@ int getGraphDiameter(Graph& graph) {
 
     return diameter;
 }
+#ifdef RUN_UTILITY_MAIN
+int main(){
+    std::cout << "Running Utility.cpp" << std::endl;
+
+    int size = 5;
+
+    Graph graph(size, size);
+    graph.setStart(0,0);
+    graph.setFinish(size -1, size -1);
+
+    graph.fillTile(3,0);
+
+    bool theOdd = false;
+    for(int i = 1; i < size; i++){
+        for (int j = 0; j < size-1; ++j) {
+            if(theOdd){
+                graph.fillTile(j+1, i*2 - 1);
+            }
+            else{
+                graph.fillTile(j, i*2 - 1);
+            }
+
+        }
+        theOdd = !theOdd;
+    }
+
+
+
+    graph.displayGraph();
+
+    std::cout << getGraphDiameter(graph);
+
+    return 1;
+}
+#endif
