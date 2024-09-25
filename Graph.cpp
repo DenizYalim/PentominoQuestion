@@ -95,6 +95,12 @@ void Graph::displayGraph() const {
                 case Finish:
                     std::cout << " [F] ";
                     break;
+                case LeftRight:
+                    std::cout << " [-] "; // " [―] "
+                    break;
+                case UpDown:
+                    std::cout << " [|] ";
+                    break;
             }
         }
         std::cout << std::endl;

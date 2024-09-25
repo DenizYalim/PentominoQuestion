@@ -8,7 +8,9 @@ enum spaceTile {
     Empty,
     Filled,
     Start,
-    Finish
+    Finish,
+    LeftRight,
+    UpDown
 };
 
 class Graph {

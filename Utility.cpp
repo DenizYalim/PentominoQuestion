@@ -140,12 +140,9 @@ int main(){
             else{
                 graph.fillTile(j, i*2 - 1);
             }
-
         }
         theOdd = !theOdd;
     }
-
-
 
     graph.displayGraph();
 
